@@ -1,0 +1,153 @@
+{
+  "auth": {
+    "frontend5d882adf5d882adf": {
+      "customAuth": true,
+      "dependsOn": [
+        {
+          "attributes": [
+            "Arn",
+            "Name"
+          ],
+          "category": "function",
+          "resourceName": "frontend5d882adf5d882adfCreateAuthChallenge",
+          "triggerProvider": "Cognito"
+        },
+        {
+          "attributes": [
+            "Arn",
+            "Name"
+          ],
+          "category": "function",
+          "resourceName": "frontend5d882adf5d882adfDefineAuthChallenge",
+          "triggerProvider": "Cognito"
+        },
+        {
+          "attributes": [
+            "Arn",
+            "Name"
+          ],
+          "category": "function",
+          "resourceName": "frontend5d882adf5d882adfPreSignup",
+          "triggerProvider": "Cognito"
+        },
+        {
+          "attributes": [
+            "Arn",
+            "Name"
+          ],
+          "category": "function",
+          "resourceName": "frontend5d882adf5d882adfVerifyAuthChallengeResponse",
+          "triggerProvider": "Cognito"
+        }
+      ],
+      "frontendAuthConfig": {
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyCharacters": [],
+          "passwordPolicyMinLength": 8
+        },
+        "signupAttributes": [
+          "PHONE_NUMBER"
+        ],
+        "socialProviders": [],
+        "usernameAttributes": [],
+        "verificationMechanisms": [
+          "PHONE_NUMBER"
+        ]
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito"
+    }
+  },
+  "function": {
+    "frontend5d882adf5d882adfCreateAuthChallenge": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "frontend5d882adf5d882adfDefineAuthChallenge": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "frontend5d882adf5d882adfPreSignup": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "frontend5d882adf5d882adfVerifyAuthChallengeResponse": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_frontend5d882adf5d882adfCreateAuthChallenge_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "frontend5d882adf5d882adfCreateAuthChallenge"
+        }
+      ]
+    },
+    "AMPLIFY_function_frontend5d882adf5d882adfCreateAuthChallenge_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "frontend5d882adf5d882adfCreateAuthChallenge"
+        }
+      ]
+    },
+    "AMPLIFY_function_frontend5d882adf5d882adfDefineAuthChallenge_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "frontend5d882adf5d882adfDefineAuthChallenge"
+        }
+      ]
+    },
+    "AMPLIFY_function_frontend5d882adf5d882adfDefineAuthChallenge_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "frontend5d882adf5d882adfDefineAuthChallenge"
+        }
+      ]
+    },
+    "AMPLIFY_function_frontend5d882adf5d882adfPreSignup_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "frontend5d882adf5d882adfPreSignup"
+        }
+      ]
+    },
+    "AMPLIFY_function_frontend5d882adf5d882adfPreSignup_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "frontend5d882adf5d882adfPreSignup"
+        }
+      ]
+    },
+    "AMPLIFY_function_frontend5d882adf5d882adfVerifyAuthChallengeResponse_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "frontend5d882adf5d882adfVerifyAuthChallengeResponse"
+        }
+      ]
+    },
+    "AMPLIFY_function_frontend5d882adf5d882adfVerifyAuthChallengeResponse_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "frontend5d882adf5d882adfVerifyAuthChallengeResponse"
+        }
+      ]
+    }
+  }
+}
